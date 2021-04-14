@@ -16,6 +16,8 @@ namespace CoreCodeCamp
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddControllers();
+
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -24,6 +26,8 @@ namespace CoreCodeCamp
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            /*app.UseMvc();*/
 
             app.UseRouting();
 
